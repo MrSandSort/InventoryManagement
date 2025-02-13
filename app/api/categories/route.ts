@@ -10,7 +10,7 @@ export async function GET(){
 }
 
 
-// Post categories by name (POST)
+// Post categories (POST)
 
 export async function POST(req:Request){
 

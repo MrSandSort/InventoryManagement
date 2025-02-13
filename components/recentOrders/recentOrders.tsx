@@ -1,5 +1,6 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
+import { Card, CardTitle } from "../ui/card"
 
 interface Order {
   id: string
@@ -9,23 +10,25 @@ interface Order {
   status: "delivered" | "pending" | "processing"
 }
 
+
+
 export function RecentOrdersTable({ orders }: { orders: Order[] }) {
   return (
-    <div className="rounded-md border">
+    <Card className="rounded-md shadow-none border">
       <div className="flex items-center justify-between p-4">
-        <h2 className="text-lg font-semibold">Recent Orders</h2>
+        <CardTitle className="text-lg font-semibold">Recent Orders</CardTitle>
         <Button variant="outline" size="sm">
           View All
         </Button>
       </div>
       <Table>
-        <TableHeader>
+        <TableHeader >
           <TableRow>
-            <TableHead>Order ID</TableHead>
-            <TableHead>Customer</TableHead>
-            <TableHead>Product</TableHead>
-            <TableHead>Amount</TableHead>
-            <TableHead>Status</TableHead>
+            <TableHead >Order ID</TableHead>
+            <TableHead >Customer</TableHead>
+            <TableHead >Product</TableHead>
+            <TableHead >Amount</TableHead>
+            <TableHead >Status</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -50,7 +53,7 @@ export function RecentOrdersTable({ orders }: { orders: Order[] }) {
           ))}
         </TableBody>
       </Table>
-    </div>
+    </Card>
   )
 }
 
