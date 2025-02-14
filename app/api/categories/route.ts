@@ -6,11 +6,11 @@ import {  NextResponse } from "next/server";
 
 export async function GET(){
    const categories= await prisma.category.findMany();
-   return NextResponse.json(categories)
+   return NextResponse.json({message:"Categories Fetched successfully", data:categories}, {status:200})
 }
 
 
-// Post categories by name (POST)
+// Post categories (POST)
 
 export async function POST(req:Request){
 
