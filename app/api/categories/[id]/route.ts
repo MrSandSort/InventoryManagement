@@ -6,7 +6,7 @@ export type PARAMS={
 }
 
 // GET Categories by ID
-export async function GET(req:Request, {params}:PARAMS){
+export async function GET(req:Request,{params}:PARAMS){
 
 const categoryId= params.id
 const category= await prisma.category.findUnique({where:{id:categoryId}})

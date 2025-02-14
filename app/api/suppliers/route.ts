@@ -27,7 +27,7 @@ export async function POST(req: Request) {
       data: { name, contact },
     });
 
-    return NextResponse.json({message:"Suppliers created successfully", data:suppliers}, {status:201})
+    return NextResponse.json({message:"Supplier created successfully", data:suppliers}, {status:201})
 
   } catch (error) {
     return NextResponse.json({ message: error }, { status: 500 });
